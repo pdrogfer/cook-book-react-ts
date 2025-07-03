@@ -1,9 +1,8 @@
 import React, { useState } from 'react';
 import logo from './logo.svg';
 import './App.css';
-import RecipeTable from './components/RecipeTable';
-import NewRecipeForm from './components/NewRecipeForm';
-import RecipeRowItem from './components/RecipeRowItem';
+import { RecipeTable } from './components/RecipeTable';
+import { NewRecipeForm } from './components/NewRecipeForm';
 import { Recipe } from './models/Recipe';
 
 function App() {

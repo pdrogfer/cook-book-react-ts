@@ -1,8 +1,10 @@
 import React from 'react';
 import { Recipe } from '../models/Recipe';
 
-function RecipeRowItem(props: { recipe: Recipe, onClick: () => void }) {
-
+export const RecipeRowItem: React.FC<{
+    recipe: Recipe, 
+    onClick: () => void
+}> = (props) => {
     return (
         <tr onClick={props.onClick}>
             <th scope='row'>{props.recipe.rowNumber}</th>
@@ -11,6 +13,4 @@ function RecipeRowItem(props: { recipe: Recipe, onClick: () => void }) {
             <td>{props.recipe.instructions}</td>
         </tr>
     );
-}
-
-export default RecipeRowItem;
+};

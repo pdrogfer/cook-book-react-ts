@@ -1,7 +1,10 @@
-import RecipeRowItem from './RecipeRowItem';
+import { RecipeRowItem } from './RecipeRowItem';
 import { Recipe } from '../models/Recipe';
 
-function RecipeTable(props: { recipes: Recipe[], deleteRecipe: Function }) {
+export const RecipeTable: React.FC<{
+    recipes: Recipe[],
+    deleteRecipe: Function
+}> = (props) => {
     return (
         <table className="table table-hover">
             <thead>
@@ -21,12 +24,10 @@ function RecipeTable(props: { recipes: Recipe[], deleteRecipe: Function }) {
                             console.log('Recipe deleted:', recipe.name);
                             props.deleteRecipe(recipe.rowNumber);
                         }
-                    }
+                        }
                     />
                 ))}
             </tbody>
         </table>
     );
-}
-
-export default RecipeTable;
+};

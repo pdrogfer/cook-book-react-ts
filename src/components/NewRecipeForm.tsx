@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-function NewRecipeForm(props: {addNewRecipe: Function}) {
+export const NewRecipeForm: React.FC<{addNewRecipe: Function}> = (props) => {
 
     const [recipeName, setRecipeName] = useState('');
     const [recipeIngredients, setRecipeIngredients] = useState('');
@@ -63,5 +63,4 @@ function NewRecipeForm(props: {addNewRecipe: Function}) {
             </form>
         </div>
     );
-}
-export default NewRecipeForm;
+};
